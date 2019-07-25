@@ -19,7 +19,6 @@ void topological_sort(vector<vector<int> > &adj, vector<bool> &used, stack<int> 
     // All vertices reachable from x are processed by now, push x to Stack
     s.push(x);
 }
-
 //reverse edges
 vector<vector<int> > transpose_graph(vector<vector<int> > adj){
     vector<vector<int> > rEdges(adj.size(), vector<int>());
@@ -37,7 +36,6 @@ int number_of_strongly_connected_components(vector<vector<int> > adj) {
     //write your code here
     stack<int> topo;
     vector<bool> visited(adj.size(), false);
-
     for(int i = 0; i < adj.size(); i++){
         if(!visited[i])
             topological_sort(adj, visited, topo, i);
