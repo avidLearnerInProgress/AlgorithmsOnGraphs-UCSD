@@ -40,6 +40,19 @@ int distance(vector<vector<int> > &adj, int s, int t) {
     if(!bfs(adj, s, t, pre, dist))
         //std::cout<<"No path from src to dest..\n";
         return -1;
+
+    /* Path printing
+    vector<int> path;
+    int final_node = dest;
+    while(pred[final_node] != -1){ //traverse back from dest to src
+        path.push_back(pred[final_node]);
+        final_node = pred[final_node];
+    }
+
+    for(auto it = path.rbegin(); it != path.rend(); it++)
+        cout<<*it<<" ";
+
+    */
     return dist[t];
 }
 
