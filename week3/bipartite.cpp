@@ -11,10 +11,7 @@ int bipartite(vector<vector<int> > &adj) {
     // we create a color array to store colors assigned to all veritces.
     // value 1 --> color 1 assigned
     // value 0 --> color 2 assigned
-    vector<int> colorArr(adj.size());
-
-    for (int i = 0; i < adj.size(); ++i)
-        colorArr[i] = -1;
+    vector<int> colorArr(adj.size(), -1);
 
     //assign color to source vertex
     colorArr[0] = 1;
