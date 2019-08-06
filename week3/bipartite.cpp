@@ -25,8 +25,8 @@ int bipartite(vector<vector<int> > &adj) {
         queue.pop();
 
         //check for self loop
-        if(adj[u][u] == 1) 
-            return 0;
+        //if(adj[u][u] == 1) 
+        //    return 0;
         
         //find all non-colored adjacent vertices
         for(auto it = adj[u].begin(); it != adj[u].end(); it++) {

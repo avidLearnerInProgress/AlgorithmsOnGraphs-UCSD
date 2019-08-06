@@ -12,8 +12,8 @@ def bipartite(adj):
     
     while not queue:
         u = queue.pop(0)
-        if adj[u][u] == 1: #self loop
-            return 0
+        #if adj[u][u] == 1: #self loop
+        #    return 0
         
         for v in adj[u]:
             #destination not colored
